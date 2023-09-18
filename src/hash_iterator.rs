@@ -1,7 +1,7 @@
 use xxhash_rust::xxh3::xxh3_64;
 
 #[derive(Eq, Hash, PartialEq, Clone, Copy, Debug)]
-pub struct Hash(u64);
+pub struct Hash(pub u64);
 
 pub struct HashIterator<I>
 where
