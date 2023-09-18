@@ -2,6 +2,9 @@
 name = "fastxgz"
 version = "0.1.0"
 edition = "2021"
+license = "AGPL-3.0"
+description = "A fasta/fastq parser for both compressed and not compressed files."
+repository = "https://github.com/lrobidou/fastxgz"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
