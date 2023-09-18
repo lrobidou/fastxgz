@@ -4,6 +4,7 @@ mod high_level_interface;
 mod kmer_iterator;
 mod lines_iterator;
 
+pub use crate::hash_iterator::Hash;
 pub use crate::hash_iterator::HashIterator;
 pub use crate::high_level_interface::fasta_reads;
 pub use crate::high_level_interface::fastq_reads;
