@@ -46,12 +46,15 @@ mod high_level_interface;
 mod kmer_iterator;
 mod lines_iterator;
 
+pub use crate::lines_iterator::ResultLinesIterator;
+pub use crate::kmer_iterator::KmerIterator;
 pub use crate::hash_iterator::HashIterator;
 pub use crate::high_level_interface::fasta_reads;
 pub use crate::high_level_interface::fastq_reads;
 pub use crate::high_level_interface::lines_iterator;
 pub use crate::high_level_interface::simple_fasta_reads;
-pub use crate::kmer_iterator::KmerIterator;
+
+
 
 ///
 #[cfg(test)]

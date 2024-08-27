@@ -13,7 +13,7 @@ where
 {
     pub fn from(lines_iterator: I) -> Self {
         Self {
-            lines_iterator: lines_iterator,
+            lines_iterator,
         }
     }
 }
@@ -46,7 +46,7 @@ where
 {
     pub fn from(lines_iterator: I) -> Self {
         Self {
-            lines_iterator: lines_iterator,
+            lines_iterator,
             next_line: None,
             end_reached: false,
         }
@@ -76,7 +76,7 @@ where
         loop {
             match self.lines_iterator.next() {
                 Some(x) => {
-                    if x.starts_with(">") {
+                    if x.starts_with('>') {
                         self.next_line = Some(x);
                         break;
                     } else {
@@ -113,7 +113,7 @@ where
 {
     pub fn from(lines_iterator: I) -> Self {
         Self {
-            lines_iterator: lines_iterator,
+            lines_iterator,
         }
     }
 }

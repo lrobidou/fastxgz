@@ -74,7 +74,7 @@ impl Iterator for ResultLinesIterator {
             Ok(size) => match size {
                 0 => None,
                 _ => {
-                    if buf.ends_with("\n") {
+                    if buf.ends_with('\n') {
                         buf.pop();
                     }
                     Some(Ok(Rc::clone(&self.buf)))
@@ -97,7 +97,7 @@ where
 {
     pub fn from(lines_iterator: I) -> Self {
         Self {
-            lines_iterator: lines_iterator,
+            lines_iterator,
         }
     }
 }
