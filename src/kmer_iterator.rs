@@ -1,5 +1,6 @@
 use std::rc::Rc;
 
+/// An iterator taking a sequence of string and yielding their kmers.
 pub struct KmerIterator<I>
 where
     I: Iterator<Item = Rc<String>>,

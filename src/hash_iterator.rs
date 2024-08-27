@@ -1,8 +1,6 @@
 use xxhash_rust::xxh3::xxh3_64;
 
-#[derive(Eq, Hash, PartialEq, Clone, Copy, Debug)]
-pub struct Hash(pub u64);
-
+/// An iterator taking a sequence of kmers and yielding their hash.
 pub struct HashIterator<I>
 where
     I: Iterator<Item = String>,
@@ -23,10 +21,10 @@ impl<I> Iterator for HashIterator<I>
 where
     I: Iterator<Item = String>,
 {
-    type Item = Hash;
+    type Item = u64;
 
     fn next(&mut self) -> Option<Self::Item> {
         let kmer = self.kmers.next()?;
-        Some(Hash(xxh3_64(kmer.as_bytes())))
+        Some(xxh3_64(kmer.as_bytes()))
     }
 }
